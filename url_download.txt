@@ -1,0 +1,15 @@
+http://centos.ufes.br/7/isos/x86_64/CentOS-7-x86_64-DVD-1503-01.iso
+http://mirror.nbtelecom.com.br/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1503-01.iso
+http://centos.brisanet.com.br/7/isos/x86_64/CentOS-7-x86_64-DVD-1503-01.iso
+http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-dvd/debian-8.2.0-amd64-DVD-1.iso
+http://releases.ubuntu.com/utopic/ubuntu-14.10-desktop-amd64.iso
+http://mirror.fdcservers.net/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://mirrors.cat.pdx.edu/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-LiveDVD.iso
+http://mirror.dattobackup.com/CentOS/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://lug.mtu.edu/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://mirror.trouble-free.net/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://centos.chi.host-engine.com/6.7/isos/x86_64/CentOS-6.7-x86_64-LiveDVD.iso
+http://mirror.ancl.hawaii.edu/linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://mirror.hostduplex.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://repo.dimenoc.com/pub/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
+http://centos.hostingxtreme.com/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
