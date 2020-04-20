@@ -30,7 +30,7 @@ ETH_WAN=enp0s3
 Links=$LocalInstall/url_download.txt
 LogWget=wget-log*
 
-
+cd $LocalInstall
 function CheckSoftware(){
 	So=$(which apt)
 	if [ -n $So ];then
@@ -54,12 +54,19 @@ function CheckSoftware(){
 		echo "O pacote iftop é necessario mas nao foi encontrado, usar o comando $So install iftop"
 		Erro=1
 	fi
+
+	if [ -x link.sh ];then
+		:
+	else
+		chmod +x link.sh
+	fi
+	
 	[ $Erro -eq 1 ] && exit 1
 	
 	}
 
 CheckSoftware
-cd $LocalInstall
+
 
 for i in `cat $Links`;do
 
