@@ -1,10 +1,60 @@
 #!/bin/bash
 
-LocalInstall=/aker/bin/firewall/codata
+/*
+ * Criação de software para teste de download
+ * 
+ * Copyright 2020 Alexeiev Farias de Araujo <ceievfa@gmail.com>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
+ */
+
+function CheckSoftware(){
+	So=$(which apt)
+	if [ -n $So ];then
+		So="apt"
+	else
+		So="yum"
+	fi
+	#software necessario
+	#iftop
+	Iftop=$(which iftop)
+	#wget
+	Wget=$(which wget)
+	if [ -z $Iftop ] && [ -z $Wget ];then
+		echo "O pacote IFTOP e WGET sao necessarios mas nao foram  encontrados, usar o comando $So install iftop wget"
+		Erro=1
+	elif [ -z $Wget ];then
+		echo "O pacote wget é necessario mas nao foi encontrado, usar o comando $So install wget"
+		Erro=1
+	elif [ -z $Iftop ];then
+		echo "O pacote iftop é necessario mas nao foi encontrado, usar o comando $So install iftop"
+		Erro=1
+	fi
+	[ $Erro -eq 1 ] && exit 1
+	}
+	
+CheckSoftware
+
+LocalInstall=/opt/CheckLink
 
 Links=$LocalInstall/url_download.txt
 LogWget=wget-log*
-ETH_WAN=eth0
+ETH_WAN=enp0s3
 cd $LocalInstall
 
 for i in `cat $Links`;do
@@ -19,43 +69,3 @@ echo "Matando os downloads"
 killall wget
 echo "Removendo os logs"
 rm -rf $LogWget
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
